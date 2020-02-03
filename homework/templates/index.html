@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>index</title>
+    </head>
+    <body>
+      <h1>Tweeter</h1>
+      
+      {% for tweet in tweets %}
+      <div>
+        <span><strong>{{tweet.username}}</strong></span>
+        <div>{{tweet.tweet}}</div>
+      </div>
+      {% endfor %}
+      
+      <hr/>
+      
+      <h2>craft new tweet</h2>
+      
+      <form method="POST">
+        <div>
+        <label for="username">username</label> 
+        <input name="username" type="text"/>
+        </div>
+        <div>
+        <label for="tweet">tweet</label> 
+        <input name="tweet" type="text"/>
+        </div>
+        <input type="submit"/>
+      </form>
+    </body>
+</html>
